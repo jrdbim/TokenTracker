@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:8765/usage.json)",
+      "Bash(/usr/libexec/ApplicationFirewall/socketfilterfw *)",
+      "Bash(ipconfig getifaddr *)",
+      "Bash(dns-sd -Q Jiradets-MacBook-Pro.local)",
+      "Bash(kill %1)",
+      "Bash(launchctl unload *)",
+      "Bash(launchctl load *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if k != 'sessions'}, indent=2\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('lastWeek:', d['lastWeek']\\)\")",
+      "Bash(xcodebuild build *)",
+      "Bash(xcrun simctl *)",
+      "Bash(echo \"booted: $?\")",
+      "Bash(python3 -c \"import sys,json; [print\\(json.dumps\\(json.loads\\(l\\), indent=2\\)[:800]\\) for l in sys.stdin]\")",
+      "Bash(python3 -c \"import sys,json; [print\\(json.dumps\\(json.loads\\(l\\), indent=2\\)[:1000]\\) for l in sys.stdin]\")",
+      "Bash(# See all projects *)",
+      "Bash(mkdir -p ~/TokenTracker-Server)",
+      "Bash(python3 server.py)",
+      "Bash(python3 -m json.tool)",
+      "Bash(lsof -ti:8765)",
+      "Bash(xargs kill -9)",
+      "Bash(lsof -i:8765 -P)",
+      "Bash(xcodebuild test *)"
+    ]
+  }
+}
